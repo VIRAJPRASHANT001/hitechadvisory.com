@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HiTech Advisory</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+header {
+      transition: all 0.3s ease-in-out;
+      color: #ffffff;
+}
+.shrink {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      background-color: rgb(252, 252, 252);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      color: rgba(10, 167, 240, 0.856);
+}
+.section {
+  scroll-margin-top: 100px; /* Adjust this to match or slightly exceed header height */
+}
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--dark);
+  scroll-margin-top: 200px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.342);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px rgba(54, 22, 22, 0.808);
+  background: rgba(10, 167, 240, 0.4);
+}
+
+.card .ripple {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(10, 167, 240, 0.4);
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 1;
+  pointer-events: none;
+  animation: ripple-animation 1.6s ease-out forwards;
+  z-index: 0;
+}
+
+/* Ripple effect animation */
+@keyframes ripple-animation {
+  to {
+    transform: scale(5);
+    opacity: 0;
+  }
+}
+
+/* Ensure content stays above ripple */
+.card > *:not(.ripple) {
+  position: relative;
+  z-index: 1;
+}
+
+.card i {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+.card h3{
+    font-size: 1.5rem;
+    text-align: center;
+    text-shadow: 10px;
+}
+.card h3{
+     text-align: center;
+
+} 
+  </style>
+</head>
+
+<body class="font-sans antialiased">
+  <!-- Header -->
+  <header id="header" class="fixed w-full top-0 bg-transparent z-50 p-6">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="text-xl font-bold"><a href="testhitech.html" >Hi-Tech Advisory</a></div>
+      <!-- class="hover:underline" -->
+      <nav class="space-x-6 hidden md:block">
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#services" class="hover:underline">Services</a>
+        <a href="#training" class="hover:underline">Training</a>
+        <a href="#consultation" class="hover:underline">Consultation</a>
+        <a href="#strengths" class="hover:underline">Why Us</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="h-screen bg-gradient-to-r from-blue-500 to-indigo-600 text-white flex flex-col justify-center items-center text-center px-6">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4" data-aos="fade-up">Transforming HR Operations</h1>
+    <p class="text-lg md:text-2xl mb-6" data-aos="fade-up" data-aos-delay="200">Strategic | Compliant | Value-Driven</p>
+    <a href="#services" class="bg-white text-blue-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition" data-aos="fade-up" data-aos-delay="400">Explore Our Services</a>
+  </section>
+
+  <!-- Sections Placeholder -->
+  <section id="about" class="py-20 px-6 bg-gray-50" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4">About Us</h2>
+      <p class="text-lg">HiTech Advisory was established with a clear mission — 
+        to simplify HR operations and make people practices more strategic, compliant, and value-driven. 
+        Over the years, we have evolved into a trusted partner for organizations seeking 
+        end-to-end HR solutions with agility, scalability, and precision. </p>
+    </div>
+  </section>
+
+  <section id="services" class="py-20 px-6" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-10 text-center">Our Services</h2>
+      <!-- Cards or Icons here -->
+         <!-- <h2 class="section-title">Our Services</h2> -->
+  <div class="service-grid">
+    <div class="card">
+        <!-- <span class="ripple"></span> -->
+      <i class="fas fa-file-invoice-dollar"></i>
+      <h3>Payroll & Compliance</h3>
+      <p>From accurate payroll processing to ensuring statutory compliance (PF, ESI, PT), we minimize risks and improve efficiency.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-user-check"></i>
+      <h3>Recruitment Support</h3>
+      <p>Scalable hiring solutions — from sourcing to onboarding — for startups, SMEs, and enterprises.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-users"></i>
+      <h3>Temp Staffing</h3>
+      <p>Flexible workforce models for project-based hiring, seasonal needs, or deputation.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-chalkboard-teacher"></i>
+      <h3>Training & Development</h3>
+      <p>Custom programs for leadership, performance, and business alignment across management levels.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-bullseye"></i>
+      <h3>Vision Alignment</h3>
+      <p>Enable teams to align daily actions with the company’s purpose and goals.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-crosshairs"></i>
+      <h3>OKR Workshops</h3>
+      <p>Embed a goal-driven culture with actionable OKRs and agility-focused training.</p>
+    </div>
+    <div class="card">
+      <i class="fas fa-balance-scale"></i>
+      <h3>Consultation</h3>
+      <p>Expert advisory for labor law registrations — Shops Act, Factory Act, PF, ESI, and more.</p>
+    </div>
+  </div>
+</section>
+
+    </div>
+  </section>
+
+  <section id="training" class="py-20 px-6 bg-gray-100" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold mb-10 text-center">section2</h2>
+      <!-- Tabs or Accordion -->
+    </div>
+  </section>
+
+  <section id="consultation" class="py-20 px-6" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6">header 3 /head 3</h2>
+      <p class="text-lg">We offer expert guidance for various labor-related registrations...</p>
+    </div>
+  </section>
+
+  <section id="strengths" class="py-20 px-6 bg-gray-50" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6">Why Choose Us</h2>
+      <!-- List or icons of strengths -->
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 px-6" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+      <!-- Form and contact info -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-10 text-center">
+    <p>&copy; 2025 HiTech Advisory. All rights reserved.</p>
+    <p>Made with 💚 by VIRAJ II</p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      if (window.scrollY > 60) {
+        header.classList.add('shrink');
+      } else {
+        header.classList.remove('shrink');
+      }
+    });
+    AOS.init();
+ </script>
+<script>
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('mouseenter', function (e) {
+      const ripple = document.createElement('span');
+      ripple.classList.add('ripple');
+
+      const rect = card.getBoundingClientRect();
+      const size = Math.max(rect.width, rect.height);
+      const x = e.clientX - rect.left - size / 2;
+      const y = e.clientY - rect.top - size / 2;
+
+      ripple.style.width = ripple.style.height = `${size}px`;
+      ripple.style.left = `${x}px`;
+      ripple.style.top = `${y}px`;
+
+      card.appendChild(ripple);
+
+      setTimeout(() => {
+        ripple.remove();
+      }, 600); // Match duration in keyframes
+    });
+  });
+</script>
+
+
+
+</body>
+
+</html>
